@@ -1,0 +1,118 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:control="clr-namespace:WishList.Controls"
+        xmlns:ignore="http://www.galasoft.ch/ignore" 
+        x:Class="WishList.Views.MainView"
+        mc:Ignorable="d ignore"
+        Icon="/WishList;component/Assets/ic_launcher.png"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        MaxHeight="720" MaxWidth="400"
+        MinHeight="720" MinWidth="400"
+        Height="720" Width="400"
+        Background="Transparent"
+        DataContext="{Binding Main,Source={StaticResource Locator}}"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.Resources>
+        <Style x:Key="btnMinStyle" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="grid">
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="grid" Value="#DED6A8"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="grid" Value="#4BD0EF"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="grid" Value="Gray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="btnCloseStyle" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Name="bd1" Background="#01000000">
+                            <Grid x:Name="grid">
+                                <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="grid" Value="#ED1C24"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="grid" Value="Red"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="grid" Value="Gray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <!--16:9-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#467CD4">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Tag="btnMin" Click="Button_Click" Content="—"  Style="{StaticResource btnMinStyle}"/>
+                <Button Tag="btnClose" Click="Button_Click" Content="✕" Style="{StaticResource btnCloseStyle}"/>
+            </StackPanel>
+        </Grid>
+        <Border Grid.Row="1" Background="White"  BorderBrush="#467CD4" BorderThickness="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <ContentControl Margin="12" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                        ContentTemplate="{Binding CurrentDT}" Content="{Binding CurrentVM,IsAsync=True}"/>
+                <control:BannerMenu Grid.Row="1"/>
+
+                <!--Minor部分，需要动态加载-->
+                <ContentControl x:Name="minorCC" Grid.RowSpan="2" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ContentControl.RenderTransform>
+                        <TranslateTransform>
+                            
+                        </TranslateTransform>
+                    </ContentControl.RenderTransform>
+                </ContentControl>
+            </Grid>
+
+        </Border>
+    </Grid>
+</Window>

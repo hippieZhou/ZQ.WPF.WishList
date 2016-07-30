@@ -1,0 +1,58 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:WL="clr-namespace:WishList"
+             x:Class="WishList.Views.ClawView" 
+             mc:Ignorable="d" 
+             d:DesignHeight="712" d:DesignWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Ellipse Width="80" Height="80">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="#5AE6A9" Offset="0.0"/>
+                            <GradientStop Color="#4BD0EF" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="月预算" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+                    <TextBlock Text="1400.00" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <WL:ImageButton Height="30" ImageSource="/WishList;component/Assets/ic_photo60_default.png" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        </Grid>
+        <ScrollViewer Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="7月收入" Foreground="Gray"/>
+                    <TextBlock Text="0.00" Margin="0,6" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="7月支出" Foreground="Gray"/>
+                    <TextBlock Text="0.00" Margin="0,6" HorizontalAlignment="Right"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="/WishList;component/Assets/ic_tail_default.png" Stretch="Uniform" MaxHeight="80"/>
+                        <TextBlock Text="7月22日 23：24分" Margin="3" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="开启了愿望记账之旅" Margin="3" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,40 @@
+﻿<Application x:Class="WishList.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:WishList.ViewModels"
+             xmlns:v="clr-namespace:WishList.Views"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             StartupUri="/Views/MainView.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <vm:ViewModelLocator x:Key="Locator"/>
+
+            <sys:String x:Key="ClawStr">明细</sys:String>
+            <sys:String x:Key="WishStr">愿望</sys:String>
+            <sys:String x:Key="ListStr">报表</sys:String>
+            <sys:String x:Key="MineStr">我的</sys:String>
+
+            <DataTemplate x:Key="ClawViewModel">
+                <v:ClawView/>
+            </DataTemplate>
+            <DataTemplate x:Key="WishViewModel">
+                <v:WishView/>
+            </DataTemplate>
+            <DataTemplate x:Key="ListViewModel">
+                <v:ListView/>
+            </DataTemplate>
+            <DataTemplate x:Key="MineViewModel">
+                <v:MineView/>
+            </DataTemplate>
+            
+            <DataTemplate x:Key="AddViewModel">
+                <v:AddView/>
+            </DataTemplate>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/Generic.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
