@@ -104,13 +104,8 @@
                 <control:BannerMenu Grid.Row="1"/>
 
                 <!--Minor部分，需要动态加载-->
-                <ContentControl x:Name="minorCC" Grid.RowSpan="2" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch">
-                    <ContentControl.RenderTransform>
-                        <TranslateTransform>
-                            
-                        </TranslateTransform>
-                    </ContentControl.RenderTransform>
-                </ContentControl>
+                <ContentControl x:Name="minorCC" Grid.RowSpan="2" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch"/>
+
             </Grid>
 
         </Border>

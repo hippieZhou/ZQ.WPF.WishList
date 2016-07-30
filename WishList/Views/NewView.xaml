@@ -16,8 +16,8 @@
         </Grid.RowDefinitions>
         <Grid>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <WL:TopMenuControl GroupName="GN" Text="收入" IsChecked="True" CheckBrush="#30C9F3" />
-                <WL:TopMenuControl GroupName="GN" Text="支出" CheckBrush="#30C9F3"/>
+                <WL:TopMenuControl GroupName="GN_TOP" Text="收入" IsChecked="True"/>
+                <WL:TopMenuControl GroupName="GN_TOP" Text="支出"/>
             </StackPanel>
         </Grid>
     </Grid>

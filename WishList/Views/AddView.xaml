@@ -6,34 +6,63 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="400">
-    
+    <UserControl.Resources>
+        <Style x:Key="NumberDataGridCellStyle" TargetType="{x:Type DataGridCell}">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HorizontalContentAlignment"  Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="LightGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" UseLayoutRounding="True" d:DesignUseLayoutRounding="True">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" UseLayoutRounding="True" d:DesignUseLayoutRounding="True"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <!--该页面不单独显示，作为其他页面展示用的框架页面-->
-    <Grid Background="AliceBlue">
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="7*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Grid Margin="12,0">
-            <WL:ImageButton Command="{Binding BackCmd}" ImageSource="/WishList;component/Assets/ic_arrow_default.png" HorizontalAlignment="Left" Margin="0,12"/>
+        <Grid>
+            <WL:ImageButton Margin="12" Command="{Binding BackCmd}" ImageSource="/WishList;component/Assets/ic_arrow_default.png" HorizontalAlignment="Left"/>
             <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <WL:TopMenuControl Grid.Column="0" GroupName="GN" IsChecked="True" Text="收入" CheckBrush="#33C8F2"/>
-                <WL:TopMenuControl Grid.Column="1" GroupName="GN" Text="收入"/>
+                <WL:TopMenuControl Grid.Column="0" GroupName="GN" IsChecked="True" Text="收入" Background="#33C8F2"/>
+                <WL:TopMenuControl Grid.Column="1" GroupName="GN" Text="支出" Background="#33C8F2"/>
             </Grid>
             <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
         </Grid>
         <Grid Grid.Row="1">
-            <DatePicker HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <DatePicker Margin="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
         </Grid>
         <Grid Grid.Row="2">
+            <WL:RoundTipControl TipLog="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="工资"/>
             <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <WL:ImageButton Grid.Column="0" ImageSource="/WishList;component/Assets/ic_photo60_default.png"/>
+            <TextBox Grid.Column="1" />
         </Grid>
         <Grid Grid.Row="4">
             <Grid.RowDefinitions>
@@ -48,6 +77,22 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+
+            <DataGridCell Grid.Row="0" Grid.Column="0" Content="1" Style="{DynamicResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="0" Grid.Column="1" Content="2" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="0" Grid.Column="2" Content="3" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="1" Grid.Column="0" Content="4" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="1" Grid.Column="1" Content="5" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="1" Grid.Column="2" Content="6" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="2" Grid.Column="0" Content="7" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="2" Grid.Column="1" Content="8" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="2" Grid.Column="2" Content="9" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="3" Grid.Column="0" Content="." Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Content="0" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <DataGridCell Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Style="{StaticResource NumberDataGridCellStyle}">
+                <Image Source="/WishList;component/Assets/ic_key_del.png" Stretch="Uniform" Height="30"/>
+            </DataGridCell>
+            <DataGridCell Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Content="确认" Foreground="#33C8F2" Style="{StaticResource NumberDataGridCellStyle}"/>
         </Grid>
     </Grid>
 </UserControl>

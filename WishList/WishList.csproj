@@ -15,7 +15,7 @@
     <WarningLevel>4</WarningLevel>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NuGetPackageImportStamp>1d47f3c9</NuGetPackageImportStamp>
-    <PublishUrl>C:\Users\hippie\Desktop\WishList\Samples\</PublishUrl>
+    <PublishUrl>发布\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="Controls\ImageButton.cs" />
     <Compile Include="Controls\TopMenuControl.cs" />
+    <Compile Include="Controls\RoundTipControl.cs" />
     <Compile Include="ViewModels\AddViewModel.cs" />
     <Compile Include="ViewModels\ClawViewModel.cs" />
     <Compile Include="ViewModels\ListViewModel.cs" />
@@ -184,7 +185,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\BannerMenuControl.cs" />
+    <Compile Include="Controls\RoundMenuControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -280,6 +281,110 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\ic_tail_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_key_del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_gongzi_default.png" />
+    <Resource Include="Assets\Income\ic_gongzi_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_jianzhi_default.png" />
+    <Resource Include="Assets\Income\ic_jianzhi_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_linghuaqian_default.png" />
+    <Resource Include="Assets\Income\ic_linghuaqian_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_hongbao_default.png" />
+    <Resource Include="Assets\Income\ic_hongbao_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_licai_default.png" />
+    <Resource Include="Assets\Income\ic_licai_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_yue_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_canyin_default.png" />
+    <Resource Include="Assets\Outlay\ic_canyin_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_jiaotong_default.png" />
+    <Resource Include="Assets\Outlay\ic_jiaotong_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_lingshi_default.png" />
+    <Resource Include="Assets\Outlay\ic_lingshi_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_shuiguo_default.png" />
+    <Resource Include="Assets\Outlay\ic_shuiguo_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_jucan_default.png" />
+    <Resource Include="Assets\Outlay\ic_jucan_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_jiushui_default.png" />
+    <Resource Include="Assets\Outlay\ic_jiushui_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_dianying_default.png" />
+    <Resource Include="Assets\Outlay\ic_dianying_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_yifu_default.png" />
+    <Resource Include="Assets\Outlay\ic_yifu_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_shenghuo_default.png" />
+    <Resource Include="Assets\Outlay\ic_shenghuo_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_huafei_default.png" />
+    <Resource Include="Assets\Outlay\ic_huafei_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_fangzu_default.png" />
+    <Resource Include="Assets\Outlay\ic_fangzu_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_hufu_default.png" />
+    <Resource Include="Assets\Outlay\ic_hufu_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_liwu_default.png" />
+    <Resource Include="Assets\Outlay\ic_liwu_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_yundong_default.png" />
+    <Resource Include="Assets\Outlay\ic_yundong_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_xuexi_default.png" />
+    <Resource Include="Assets\Outlay\ic_xuexi_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_hongbao_default.png" />
+    <Resource Include="Assets\Outlay\ic_hongbao_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_lvyou_default.png" />
+    <Resource Include="Assets\Outlay\ic_lvyou_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_yaopin_default.png" />
+    <Resource Include="Assets\Outlay\ic_yaopin_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_jia_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_jia_default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
