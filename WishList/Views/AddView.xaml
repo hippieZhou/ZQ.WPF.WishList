@@ -1,25 +1,28 @@
-﻿<UserControl x:Class="WishList.Views.AddView"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:WL="clr-namespace:WishList"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Custom="http://www.galasoft.ch/mvvmlight" 
+             x:Class="WishList.Views.AddView" 
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="400">
     <UserControl.Resources>
-        <Style x:Key="NumberDataGridCellStyle" TargetType="{x:Type DataGridCell}">
+        <Style x:Key="NumberButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="FontSize" Value="18"/>
-            <Setter Property="HorizontalContentAlignment"  Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="LightGray"/>
+            <Setter Property="Foreground" Value="Black"/>
             <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type DataGridCell}">
-                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" UseLayoutRounding="True" d:DesignUseLayoutRounding="True">
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" UseLayoutRounding="True" d:DesignUseLayoutRounding="True"/>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
@@ -61,8 +64,9 @@
                 <ColumnDefinition Width="48"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <WL:ImageButton Grid.Column="0" ImageSource="/WishList;component/Assets/ic_photo60_default.png"/>
-            <TextBox Grid.Column="1" />
+            <WL:ImageButton Grid.Column="0" Height="36" ImageSource="/WishList;component/Assets/ic_photo60_default.png"/>
+            <TextBlock Grid.Column="1" Text="{Binding Sum}"  FontSize="18" Foreground="#33C8F2" FontWeight="Bold"
+                       HorizontalAlignment="Right"  VerticalAlignment="Center" Margin="12,0"/>
         </Grid>
         <Grid Grid.Row="4">
             <Grid.RowDefinitions>
@@ -78,21 +82,21 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <DataGridCell Grid.Row="0" Grid.Column="0" Content="1" Style="{DynamicResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="0" Grid.Column="1" Content="2" Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="0" Grid.Column="2" Content="3" Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="1" Grid.Column="0" Content="4" Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="1" Grid.Column="1" Content="5" Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="1" Grid.Column="2" Content="6" Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="2" Grid.Column="0" Content="7" Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="2" Grid.Column="1" Content="8" Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="2" Grid.Column="2" Content="9" Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="3" Grid.Column="0" Content="." Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Content="0" Style="{StaticResource NumberDataGridCellStyle}"/>
-            <DataGridCell Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Style="{StaticResource NumberDataGridCellStyle}">
-                <Image Source="/WishList;component/Assets/ic_key_del.png" Stretch="Uniform" Height="30"/>
-            </DataGridCell>
-            <DataGridCell Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Content="确认" Foreground="#33C8F2" Style="{StaticResource NumberDataGridCellStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="1" Grid.Row="0" Grid.Column="0" Content="1" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="2" Grid.Row="0" Grid.Column="1" Content="2" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="3" Grid.Row="0" Grid.Column="2" Content="3" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="4" Grid.Row="1" Grid.Column="0" Content="4" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="5" Grid.Row="1" Grid.Column="1" Content="5" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="6" Grid.Row="1" Grid.Column="2" Content="6" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="7" Grid.Row="2" Grid.Column="0" Content="7" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="8" Grid.Row="2" Grid.Column="1" Content="8" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="9" Grid.Row="2" Grid.Column="2" Content="9" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="." Grid.Row="3" Grid.Column="0" Content="." Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Content="0" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding DelComd}" Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Style="{DynamicResource NumberButtonStyle}">
+                <Image Source="/WishList;component/Assets/ic_key_del.png" Stretch="Uniform" Height="28"/>
+            </Button>
+            <Button Command="{Binding YesCmd}" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Content="确认" Foreground="#33C8F2" Style="{DynamicResource NumberButtonStyle}"/>
         </Grid>
     </Grid>
 </UserControl>

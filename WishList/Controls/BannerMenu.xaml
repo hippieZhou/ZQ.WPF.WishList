@@ -64,10 +64,10 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <WL:RoundMenuControl GroupName="GN_Menu" Command="{Binding MenuCmd}" CommandParameter="{StaticResource ClawStr}" Text="{StaticResource ClawStr}" IsChecked="True" UnCheckedImage="/WishList;component/Assets/ic_claw_default.png" CheckedImage="/WishList;component/Assets/ic_claw2_default.png" Grid.Column="0"/>
-                <WL:RoundMenuControl GroupName="GN_Menu" Command="{Binding MenuCmd}" CommandParameter="{StaticResource WishStr}" Text="{StaticResource WishStr}" UnCheckedImage="/WishList;component/Assets/ic_wish_default.png" CheckedImage="/WishList;component/Assets/ic_wish2_default.png" Grid.Column="1"/>
-                <WL:RoundMenuControl GroupName="GN_Menu" Command="{Binding MenuCmd}" CommandParameter="{StaticResource ListStr}" Text="{StaticResource ListStr}" UnCheckedImage="/WishList;component/Assets/ic_list_default.png" CheckedImage="/WishList;component/Assets/ic_list2_default.png" Grid.Column="3"/>
-                <WL:RoundMenuControl GroupName="GN_Menu" Command="{Binding MenuCmd}" CommandParameter="{StaticResource MineStr}" Text="{StaticResource MineStr}" UnCheckedImage="/WishList;component/Assets/ic_mine_default.png" CheckedImage="/WishList;component/Assets/ic_mine2_default.png" Grid.Column="4"/>
+                <WL:RoundMenuControl GroupName="GN_Menu" Command="{Binding MenuCmd}" CommandParameter="{Binding Path=Text,RelativeSource={RelativeSource Mode=Self}}" Text="{StaticResource ClawStr}" IsChecked="True" UnCheckedImage="/WishList;component/Assets/ic_claw_default.png" CheckedImage="/WishList;component/Assets/ic_claw2_default.png" Grid.Column="0"/>
+                <WL:RoundMenuControl GroupName="GN_Menu" Command="{Binding MenuCmd}" CommandParameter="{Binding Path=Text,RelativeSource={RelativeSource Mode=Self}}" Text="{StaticResource WishStr}" UnCheckedImage="/WishList;component/Assets/ic_wish_default.png" CheckedImage="/WishList;component/Assets/ic_wish2_default.png" Grid.Column="1"/>
+                <WL:RoundMenuControl GroupName="GN_Menu" Command="{Binding MenuCmd}" CommandParameter="{Binding Path=Text,RelativeSource={RelativeSource Mode=Self}}" Text="{StaticResource ListStr}" UnCheckedImage="/WishList;component/Assets/ic_list_default.png" CheckedImage="/WishList;component/Assets/ic_list2_default.png" Grid.Column="3"/>
+                <WL:RoundMenuControl GroupName="GN_Menu" Command="{Binding MenuCmd}" CommandParameter="{Binding Path=Text,RelativeSource={RelativeSource Mode=Self}}" Text="{StaticResource MineStr}" UnCheckedImage="/WishList;component/Assets/ic_mine_default.png" CheckedImage="/WishList;component/Assets/ic_mine2_default.png" Grid.Column="4"/>
             </Grid>
         </Grid>
         <Border Height="1" Background="Gray" VerticalAlignment="Bottom"/>

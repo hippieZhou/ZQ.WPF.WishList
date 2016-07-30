@@ -29,7 +29,7 @@ namespace WishList.Views
                 var sender = obj.Sender as MINOR;
                 this.minorCC.Content = sender.Minor_VM;
                 this.minorCC.ContentTemplate = sender.Minor_DT;
-                this.minorCC.Visibility = System.Windows.Visibility.Visible;
+                this.minorCC.Visibility = Visibility.Visible;
             }
         }
         private void CloseMinorViewFunc(Visibility obj)
@@ -37,7 +37,7 @@ namespace WishList.Views
             this.minorCC.Visibility = obj;
         }
 
-        private void Window_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
         }

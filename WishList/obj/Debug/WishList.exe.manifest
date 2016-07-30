@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WishList.exe" size="248768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WishList.exe" size="251328">
       <assemblyIdentity name="WishList" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Fz1MjtP+jItV/XadpiNOx5mxgjisztv99P4/Lb4jhIg=</dsig:DigestValue>
+        <dsig:DigestValue>zTJb3XfGgUJ5DaPWgHWT6BfQb7QV0Kiwmw+zP4alw1E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
