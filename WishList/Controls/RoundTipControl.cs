@@ -32,24 +32,16 @@ namespace WishList
         public static readonly DependencyProperty TipProperty =
             DependencyProperty.Register("Tip", typeof(string), typeof(RoundTipControl), new PropertyMetadata(string.Empty));
 
-        public ImageSource TipLog
+
+
+        public ImageSource ImageSource
         {
-            get { return (ImageSource)GetValue(TipLogProperty); }
-            set { SetValue(TipLogProperty, value); }
+            get { return (ImageSource)GetValue(ImageSourceProperty); }
+            set { SetValue(ImageSourceProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for TipLog.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty TipLogProperty =
-            DependencyProperty.Register("TipLog", typeof(ImageSource), typeof(RoundTipControl), new PropertyMetadata(null));
-
-        public Brush CheckBrush
-        {
-            get { return (Brush)GetValue(CheckBrushProperty); }
-            set { SetValue(CheckBrushProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for CheckBrush.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty CheckBrushProperty =
-            DependencyProperty.Register("CheckBrush", typeof(Brush), typeof(RoundTipControl), new PropertyMetadata(null));
+        // Using a DependencyProperty as the backing store for ImageSource.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ImageSourceProperty =
+            DependencyProperty.Register("ImageSource", typeof(ImageSource), typeof(RoundTipControl), new PropertyMetadata(null));
     }
 }

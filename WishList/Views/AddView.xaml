@@ -28,6 +28,66 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <DataTemplate x:Key="IncomeDT">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <WL:RoundTipControl GroupName="Income_Tip" IsChecked="True" Grid.Row="0" Grid.Column="0" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="工资"/>
+                <WL:RoundTipControl GroupName="Income_Tip" Grid.Row="0" Grid.Column="1" ImageSource="/WishList;component/Assets/Income/ic_jianzhi_default.png" Tip="兼职"/>
+                <WL:RoundTipControl GroupName="Income_Tip" Grid.Row="0" Grid.Column="2" ImageSource="/WishList;component/Assets/Income/ic_linghuaqian_default.png" Tip="零花钱"/>
+                <WL:RoundTipControl GroupName="Income_Tip" Grid.Row="0" Grid.Column="3" ImageSource="/WishList;component/Assets/Income/ic_hongbao_default.png" Tip="红包"/>
+                <WL:RoundTipControl GroupName="Income_Tip" Grid.Row="0" Grid.Column="4" ImageSource="/WishList;component/Assets/Income/ic_licai_default.png" Tip="理财收益"/>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OutlayDT">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <WL:RoundTipControl IsChecked="True" GroupName="Outlay_Tip" Grid.Row="0" Grid.Column="0" ImageSource="/WishList;component/Assets/Outlay/ic_yiban_default.png" Tip="一般"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="0" Grid.Column="1" ImageSource="/WishList;component/Assets/Outlay/ic_canyin_default.png" Tip="餐饮"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="0" Grid.Column="2" ImageSource="/WishList;component/Assets/Outlay/ic_jiaotong_default.png" Tip="交通"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="0" Grid.Column="3" ImageSource="/WishList;component/Assets/Outlay/ic_lingshi_default.png" Tip="零食"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="0" Grid.Column="4" ImageSource="/WishList;component/Assets/Outlay/ic_shuiguo_default.png" Tip="水果"/>
+
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="1" Grid.Column="0" ImageSource="/WishList;component/Assets/Outlay/ic_jucan_default.png" Tip="腐败聚会"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="1" Grid.Column="1" ImageSource="/WishList;component/Assets/Outlay/ic_jiushui_default.png" Tip="酒水饮料"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="1" Grid.Column="2" ImageSource="/WishList;component/Assets/Outlay/ic_dianying_default.png" Tip="电影"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="1" Grid.Column="3" ImageSource="/WishList;component/Assets/Outlay/ic_yifu_default.png" Tip="衣服鞋包"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="1" Grid.Column="4" ImageSource="/WishList;component/Assets/Outlay/ic_shenghuo_default.png" Tip="生活用品"/>
+
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="2" Grid.Column="0" ImageSource="/WishList;component/Assets/Outlay/ic_huafei_default.png" Tip="话费"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="2" Grid.Column="1" ImageSource="/WishList;component/Assets/Outlay/ic_fangzu_default.png" Tip="房租"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="2" Grid.Column="2" ImageSource="/WishList;component/Assets/Outlay/ic_hufu_default.png" Tip="护肤彩妆"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="2" Grid.Column="3" ImageSource="/WishList;component/Assets/Outlay/ic_liwu_default.png" Tip="礼物"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="2" Grid.Column="4" ImageSource="/WishList;component/Assets/Outlay/ic_yundong_default.png" Tip="运动"/>
+
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="3" Grid.Column="0" ImageSource="/WishList;component/Assets/Outlay/ic_xuexi_default.png" Tip="学习"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="3" Grid.Column="1" ImageSource="/WishList;component/Assets/Outlay/ic_hongbao_default.png" Tip="红包"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="3" Grid.Column="2" ImageSource="/WishList;component/Assets/Outlay/ic_lvyou_default.png" Tip="旅行"/>
+                <WL:RoundTipControl GroupName="Outlay_Tip" Grid.Row="3" Grid.Column="3" ImageSource="/WishList;component/Assets/Outlay/ic_yaopin_default.png" Tip="药品"/>
+            </Grid>
+        </DataTemplate>
     </UserControl.Resources>
 
     <!--该页面不单独显示，作为其他页面展示用的框架页面-->
@@ -39,32 +99,73 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Grid>
+        
+        <Grid Grid.Row="0">
             <WL:ImageButton Margin="12" Command="{Binding BackCmd}" ImageSource="/WishList;component/Assets/ic_arrow_default.png" HorizontalAlignment="Left"/>
             <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <WL:TopMenuControl Grid.Column="0" GroupName="GN" IsChecked="True" Text="收入" Background="#33C8F2"/>
-                <WL:TopMenuControl Grid.Column="1" GroupName="GN" Text="支出" Background="#33C8F2"/>
+                <WL:TopMenuControl Tag="IncomeDT" Checked="TopMenuControl_Checked" Grid.Column="0" GroupName="GN" IsChecked="True" Text="收入" Background="#33C8F2"/>
+                <WL:TopMenuControl Tag="OutlayDT" Checked="TopMenuControl_Checked" Grid.Column="1" GroupName="GN" Text="支出" Background="#33C8F2"/>
             </Grid>
             <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
         </Grid>
+        
         <Grid Grid.Row="1">
             <DatePicker Margin="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
         </Grid>
-        <Grid Grid.Row="2">
-            <WL:RoundTipControl TipLog="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="工资"/>
-            <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
-        </Grid>
+        
+        <!--<Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <WL:RoundTipControl Grid.Row="0" Grid.Column="0" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="工资"/>
+            <WL:RoundTipControl Grid.Row="0" Grid.Column="1" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="餐饮"/>
+            <WL:RoundTipControl Grid.Row="0" Grid.Column="2" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="交通"/>
+            <WL:RoundTipControl Grid.Row="0" Grid.Column="3" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="零食"/>
+            <WL:RoundTipControl Grid.Row="0" Grid.Column="4" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="水果"/>
+           
+            <WL:RoundTipControl Grid.Row="1" Grid.Column="0" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="腐败聚会"/>
+            <WL:RoundTipControl Grid.Row="1" Grid.Column="1" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="酒水饮料"/>
+            <WL:RoundTipControl Grid.Row="1" Grid.Column="2" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="电影"/>
+            <WL:RoundTipControl Grid.Row="1" Grid.Column="3" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="衣服鞋包"/>
+            <WL:RoundTipControl Grid.Row="1" Grid.Column="4" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="生活用品"/>
+            
+            <WL:RoundTipControl Grid.Row="2" Grid.Column="0" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="话费"/>
+            <WL:RoundTipControl Grid.Row="2" Grid.Column="1" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="房租"/>
+            <WL:RoundTipControl Grid.Row="2" Grid.Column="2" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="护肤彩妆"/>
+            <WL:RoundTipControl Grid.Row="2" Grid.Column="3" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="礼物"/>
+            <WL:RoundTipControl Grid.Row="2" Grid.Column="4" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="运动"/>
+            
+            <WL:RoundTipControl Grid.Row="3" Grid.Column="0" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="学习"/>
+            <WL:RoundTipControl Grid.Row="3" Grid.Column="1" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="红包"/>
+            <WL:RoundTipControl Grid.Row="3" Grid.Column="2" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="旅行"/>
+            <WL:RoundTipControl Grid.Row="3" Grid.Column="3" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="药品"/>
+            <WL:RoundTipControl Grid.Row="3" Grid.Column="4" ImageSource="/WishList;component/Assets/Income/ic_gongzi_default.png" Tip="添加"/>
+        </Grid>-->
+
+        <ContentControl x:Name="MainCC" Grid.Row="2" ContentTemplate="{StaticResource IncomeDT}" VerticalAlignment="Top"/>
+        <Border Grid.Row="2" Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
+        
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="48"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <WL:ImageButton Grid.Column="0" Height="36" ImageSource="/WishList;component/Assets/ic_photo60_default.png"/>
+            <WL:ImageButton Grid.Column="0" Height="30" ImageSource="/WishList;component/Assets/ic_photo60_default.png"/>
             <TextBlock Grid.Column="1" Text="{Binding Sum}"  FontSize="18" Foreground="#33C8F2" FontWeight="Bold"
                        HorizontalAlignment="Right"  VerticalAlignment="Center" Margin="12,0"/>
         </Grid>

@@ -28,7 +28,6 @@
                     <TextBlock Text="1400.00" Foreground="White" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
-            <WL:ImageButton Height="30" ImageSource="/WishList;component/Assets/ic_photo60_default.png" HorizontalAlignment="Right" VerticalAlignment="Top"/>
         </Grid>
         <ScrollViewer Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <Grid>

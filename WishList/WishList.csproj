@@ -286,29 +286,6 @@
     <Resource Include="Assets\ic_key_del.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Income\ic_gongzi_default.png" />
-    <Resource Include="Assets\Income\ic_gongzi_yellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Income\ic_jianzhi_default.png" />
-    <Resource Include="Assets\Income\ic_jianzhi_yellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Income\ic_linghuaqian_default.png" />
-    <Resource Include="Assets\Income\ic_linghuaqian_yellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Income\ic_hongbao_default.png" />
-    <Resource Include="Assets\Income\ic_hongbao_yellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Income\ic_licai_default.png" />
-    <Resource Include="Assets\Income\ic_licai_yellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Outlay\ic_yue_default.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\Outlay\ic_canyin_default.png" />
     <Resource Include="Assets\Outlay\ic_canyin_yellow.png" />
   </ItemGroup>
@@ -384,7 +361,41 @@
     <Resource Include="Assets\Outlay\ic_jia_default.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Assets\Income\ic_gongzi_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_gongzi_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_hongbao_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_hongbao_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Assets\Income\ic_jia_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_jianzhi_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_jianzhi_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_licai_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_licai_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_linghuaqian_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Income\ic_linghuaqian_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Outlay\ic_yiban_default.png" />
+    <Resource Include="Assets\Outlay\ic_yiban_yellow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

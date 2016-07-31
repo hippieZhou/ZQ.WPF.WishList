@@ -24,5 +24,19 @@ namespace WishList.Views
         {
             InitializeComponent();
         }
+
+        private void RoundTipControl_GotFocus(object sender, RoutedEventArgs e)
+        {
+            var handler = (RoundTipControl)sender;
+        }
+
+        private void TopMenuControl_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sender is TopMenuControl && this.MainCC != null)
+            {
+                var handler = (TopMenuControl)sender;
+                this.MainCC.ContentTemplate = this.Resources[handler.Tag.ToString()] as DataTemplate;
+            }
+        }
     }
 }
