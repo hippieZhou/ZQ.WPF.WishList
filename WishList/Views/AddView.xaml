@@ -99,7 +99,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        
+
         <Grid Grid.Row="0">
             <WL:ImageButton Margin="12" Command="{Binding BackCmd}" ImageSource="/WishList;component/Assets/ic_arrow_default.png" HorizontalAlignment="Left"/>
             <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -112,12 +112,12 @@
             </Grid>
             <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
         </Grid>
-        
+
         <Grid Grid.Row="1">
-            <DatePicker Margin="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <DatePicker Margin="12" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
         </Grid>
-        
+
         <!--<Grid Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -159,7 +159,7 @@
 
         <ContentControl x:Name="MainCC" Grid.Row="2" ContentTemplate="{StaticResource IncomeDT}" VerticalAlignment="Top"/>
         <Border Grid.Row="2" Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
-        
+
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="48"/>
@@ -200,4 +200,5 @@
             <Button Command="{Binding YesCmd}" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Content="确认" Foreground="#33C8F2" Style="{DynamicResource NumberButtonStyle}"/>
         </Grid>
     </Grid>
+
 </UserControl>

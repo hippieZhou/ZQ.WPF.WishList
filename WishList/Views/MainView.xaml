@@ -34,10 +34,10 @@
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" TargetName="grid" Value="#DED6A8"/>
+                                <Setter Property="Background" TargetName="grid" Value="#0078D7"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" TargetName="grid" Value="#4BD0EF"/>
+                                <Setter Property="Background" TargetName="grid" Value="#0060AC"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter Property="Background" TargetName="grid" Value="Gray"/>

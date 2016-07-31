@@ -106,7 +106,7 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="#2FC9F2"/>
+                            <Setter Property="Background" TargetName="border" Value="#98D5D6"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="False">
                             <Setter Property="Background" TargetName="border" Value="LightGray"/>
