@@ -13,7 +13,8 @@ namespace WishList.ViewModels
 
     public class MINORManager
     {
-        public static AddViewModel AddVM = new AddViewModel();
+        public static AddClawViewModel AddClawVM = new AddClawViewModel();
+        public static AddWishViewModel AddWishVM = new AddWishViewModel();
 
         private MINOR Minor { get; set; }
 

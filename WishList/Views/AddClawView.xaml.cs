@@ -18,9 +18,9 @@ namespace WishList.Views
     /// <summary>
     /// MinorView.xaml 的交互逻辑
     /// </summary>
-    public partial class AddView : UserControl
+    public partial class AddClawView : UserControl
     {
-        public AddView()
+        public AddClawView()
         {
             InitializeComponent();
         }

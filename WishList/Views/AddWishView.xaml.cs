@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WishList.Views
 {
     /// <summary>
-    /// NewView.xaml 的交互逻辑
+    /// AddWishView.xaml 的交互逻辑
     /// </summary>
-    public partial class NewView : UserControl
+    public partial class AddWishView : UserControl
     {
-        public NewView()
+        public AddWishView()
         {
             InitializeComponent();
         }

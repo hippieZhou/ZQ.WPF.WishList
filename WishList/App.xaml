@@ -26,11 +26,14 @@
             <DataTemplate x:Key="MineViewModel">
                 <v:MineView/>
             </DataTemplate>
-            
-            <DataTemplate x:Key="AddViewModel">
-                <v:AddView/>
+
+            <DataTemplate x:Key="AddClawViewModel">
+                <v:AddClawView/>
             </DataTemplate>
-            
+            <DataTemplate x:Key="AddWishViewModel">
+                <v:AddWishView/>
+            </DataTemplate>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Themes/Generic.xaml"/>
             </ResourceDictionary.MergedDictionaries>

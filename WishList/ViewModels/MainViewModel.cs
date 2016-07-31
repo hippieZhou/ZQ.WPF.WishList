@@ -71,7 +71,7 @@ namespace WishList.ViewModels
                 return _addCmd ?? (_addCmd = new RelayCommand(
                     () =>
                     {
-                        MINORManager.CurrentMinor.PostMinorViewAndViewModel(MINORManager.AddVM);
+                        MINORManager.CurrentMinor.PostMinorViewAndViewModel(MINORManager.AddClawVM);
                     }));
             }
         }

@@ -26,6 +26,8 @@ namespace WishList.Views
         {
             if (obj.Sender is MINOR)
             {
+                this.minorCC.Content = this.minorCC.ContentTemplate = null;
+
                 var sender = obj.Sender as MINOR;
                 this.minorCC.Content = sender.Minor_VM;
                 this.minorCC.ContentTemplate = sender.Minor_DT;

@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/outlay/ic_yiban_default.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/outlay/ic_yiban_yellow.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/ic_fish_default.png")]
 
 

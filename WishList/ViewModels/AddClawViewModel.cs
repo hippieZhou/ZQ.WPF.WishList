@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace WishList.ViewModels
 {
-    public class AddViewModel:ViewModelBase
+    public class AddClawViewModel:ViewModelBase
     {
         private string _sum = "0";
         public string Sum

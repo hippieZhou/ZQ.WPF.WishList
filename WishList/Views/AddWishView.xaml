@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="WishList.Views.AddWishView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:WL ="clr-namespace:WishList"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WishList.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style x:Key="WatermarkTextBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Margin" Value="12,6"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#EAECF2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="White">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <WL:ImageButton Command="{Binding BackCmd}" Margin="12,6" ImageSource="/WishList;component/Assets/ic_arrow_default.png" Opacity="0.6"/>
+                <TextBlock Text="添加愿望" VerticalAlignment="Center" FontSize="20"/>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="1">
+            <Border Background="White" Height="100" Width="100" CornerRadius="60" Margin="24">
+                <WL:ImageButton HorizontalAlignment="Center" VerticalAlignment="Center" ImageSource="/WishList;component/Assets/ic_photo60_default.png"/>
+            </Border>
+            <TextBox Style="{StaticResource WatermarkTextBoxStyle}"/>
+            <TextBox Style="{StaticResource WatermarkTextBoxStyle}"/>
+            <TextBox Style="{StaticResource WatermarkTextBoxStyle}"/>
+        </StackPanel>
+    </Grid>
+    
+</UserControl>

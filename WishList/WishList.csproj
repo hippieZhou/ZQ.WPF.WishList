@@ -115,7 +115,8 @@
     <Compile Include="Controls\TopMenuControl.cs" />
     <Compile Include="Controls\RoundTipControl.cs" />
     <Compile Include="Models\BillModel.cs" />
-    <Compile Include="ViewModels\AddViewModel.cs" />
+    <Compile Include="ViewModels\AddClawViewModel.cs" />
+    <Compile Include="ViewModels\AddWishViewModel.cs" />
     <Compile Include="ViewModels\ClawViewModel.cs" />
     <Compile Include="ViewModels\ListViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -123,6 +124,9 @@
     <Compile Include="ViewModels\MINORManager.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="ViewModels\WishViewModel.cs" />
+    <Compile Include="Views\AddWishView.xaml.cs">
+      <DependentUpon>AddWishView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ClawView.xaml.cs">
       <DependentUpon>ClawView.xaml</DependentUpon>
     </Compile>
@@ -139,11 +143,8 @@
     <Compile Include="Views\MineView.xaml.cs">
       <DependentUpon>MineView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AddView.xaml.cs">
-      <DependentUpon>AddView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\NewView.xaml.cs">
-      <DependentUpon>NewView.xaml</DependentUpon>
+    <Compile Include="Views\AddClawView.xaml.cs">
+      <DependentUpon>AddClawView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WishView.xaml.cs">
       <DependentUpon>WishView.xaml</DependentUpon>
@@ -155,6 +156,10 @@
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddWishView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ClawView.xaml">
       <SubType>Designer</SubType>
@@ -172,11 +177,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AddView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\NewView.xaml">
+    <Page Include="Views\AddClawView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -362,6 +363,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Outlay\ic_yiban_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_fish_default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

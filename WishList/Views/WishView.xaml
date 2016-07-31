@@ -4,8 +4,55 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="720" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style x:Key="AddButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#2FC9F2"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#2FC9F2"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#2FC9F2"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#2FC9F2"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="Gray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
     <Grid>
-        <TextBlock Text="Wish" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="愿望" HorizontalAlignment="Center" FontSize="24"/>
+            <Button Command="{Binding AddCmd}" Content="添加" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{DynamicResource AddButtonStyle}"/>
+        </Grid>
+        <StackPanel  Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="/WishList;component/Assets/ic_fish_default.png" Stretch="Uniform" MaxWidth="120"/>
+            <TextBlock Text="点击添加愿望" HorizontalAlignment="Center" FontSize="16" Margin="6"/>
+            <TextBlock Text="人没有梦想和咸鱼有什么区别呢？" HorizontalAlignment="Center" Foreground="Gray"/>
+        </StackPanel>
     </Grid>
 </UserControl>

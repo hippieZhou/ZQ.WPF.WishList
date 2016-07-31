@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\hippieZhou\Desktop\WishList\WishList\App.xaml
-9-1925472076
+91776940803
 
-30-175233290
+311486193314
 691259152245
-Controls\BannerMenu.xaml;Themes\Generic.xaml;Views\ClawView.xaml;Views\ListView.xaml;Views\MainView.xaml;Views\MineView.xaml;Views\AddView.xaml;Views\NewView.xaml;Views\WishView.xaml;
+Controls\BannerMenu.xaml;Themes\Generic.xaml;Views\AddWishView.xaml;Views\ClawView.xaml;Views\ListView.xaml;Views\MainView.xaml;Views\MineView.xaml;Views\AddClawView.xaml;Views\WishView.xaml;
 
-True
+False
 
