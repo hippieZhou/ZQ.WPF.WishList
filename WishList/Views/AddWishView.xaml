@@ -10,7 +10,6 @@
     <UserControl.Resources>
         <Style x:Key="WatermarkTextBoxStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Margin" Value="12,6"/>
-            <Setter Property="FontSize" Value="24"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderBrush" Value="White"/>
             <Setter Property="Foreground" Value="Black"/>
@@ -25,7 +24,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TextBox}">
                         <Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" VerticalAlignment="Center"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="6" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsEnabled" Value="false">
@@ -51,6 +50,42 @@
                 </MultiTrigger>
             </Style.Triggers>
         </Style>
+
+        <Style x:Key="WishButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="12"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="5" Height="{TemplateBinding Height}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="LightGray"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="LightGray"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="LightGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
 
     <Grid Background="#EAECF2">
@@ -61,17 +96,19 @@
         <Grid Grid.Row="0" Background="White">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <WL:ImageButton Command="{Binding BackCmd}" Margin="12,6" ImageSource="/WishList;component/Assets/ic_arrow_default.png" Opacity="0.6"/>
-                <TextBlock Text="添加愿望" VerticalAlignment="Center" FontSize="20"/>
+                <TextBlock Text="添加愿望" VerticalAlignment="Center" FontSize="18"/>
             </StackPanel>
         </Grid>
         <StackPanel Grid.Row="1">
             <Border Background="White" Height="100" Width="100" CornerRadius="60" Margin="24">
-                <WL:ImageButton HorizontalAlignment="Center" VerticalAlignment="Center" ImageSource="/WishList;component/Assets/ic_photo60_default.png"/>
+                <WL:ImageButton HorizontalAlignment="Center" Height="26" VerticalAlignment="Center" ImageSource="/WishList;component/Assets/ic_photo60_default.png"/>
             </Border>
-            <TextBox Style="{StaticResource WatermarkTextBoxStyle}"/>
-            <TextBox Style="{StaticResource WatermarkTextBoxStyle}"/>
-            <TextBox Style="{StaticResource WatermarkTextBoxStyle}"/>
+            <TextBox ToolTip="我的愿望" Style="{StaticResource WatermarkTextBoxStyle}"/>
+            <TextBox ToolTip="愿望资金" Style="{StaticResource WatermarkTextBoxStyle}"/>
+            <TextBox ToolTip="备注" Style="{StaticResource WatermarkTextBoxStyle}"/>
+
+            <Button Content="许下愿望" Style="{DynamicResource WishButtonStyle}"/>
         </StackPanel>
     </Grid>
-    
+
 </UserControl>
