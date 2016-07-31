@@ -82,17 +82,17 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Command="{Binding PutCmd}" CommandParameter="1" Grid.Row="0" Grid.Column="0" Content="1" Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="2" Grid.Row="0" Grid.Column="1" Content="2" Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="3" Grid.Row="0" Grid.Column="2" Content="3" Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="4" Grid.Row="1" Grid.Column="0" Content="4" Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="5" Grid.Row="1" Grid.Column="1" Content="5" Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="6" Grid.Row="1" Grid.Column="2" Content="6" Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="7" Grid.Row="2" Grid.Column="0" Content="7" Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="8" Grid.Row="2" Grid.Column="1" Content="8" Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="9" Grid.Row="2" Grid.Column="2" Content="9" Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="." Grid.Row="3" Grid.Column="0" Content="." Style="{DynamicResource NumberButtonStyle}"/>
-            <Button Command="{Binding PutCmd}" CommandParameter="0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Content="0" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="0" Grid.Column="0" Content="1" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="0" Grid.Column="1" Content="2" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="0" Grid.Column="2" Content="3" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="1" Grid.Column="0" Content="4" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="1" Grid.Column="1" Content="5" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="1" Grid.Column="2" Content="6" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="2" Grid.Column="0" Content="7" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="2" Grid.Column="1" Content="8" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="2" Grid.Column="2" Content="9" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="3" Grid.Column="0" Content="." Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Command="{Binding PutCmd}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Content="0" Style="{DynamicResource NumberButtonStyle}"/>
             <Button Command="{Binding DelComd}" Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Style="{DynamicResource NumberButtonStyle}">
                 <Image Source="/WishList;component/Assets/ic_key_del.png" Stretch="Uniform" Height="28"/>
             </Button>
