@@ -61,7 +61,6 @@ namespace WishList.Views
                     return;
                 }
             }
-
         }
     }
 }
