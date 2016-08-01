@@ -51,6 +51,7 @@ namespace WishList.Views
                 var Tag = (sender as Button).Tag;
                 if (Tag.Equals("btnMin"))
                 {
+                    this.WindowState = System.Windows.WindowState.Minimized;
                 }
                 else if (Tag.Equals("btnClose"))
                 {
@@ -58,10 +59,9 @@ namespace WishList.Views
                 }
                 else
                 {
-                    return;
+                    this.WindowState = System.Windows.WindowState.Normal;
                 }
             }
-
         }
     }
 }
