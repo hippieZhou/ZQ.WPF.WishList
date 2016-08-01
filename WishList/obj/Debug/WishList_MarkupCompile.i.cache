@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\hippieZhou\Desktop\WishList\WishList\obj\Debug\
+G:\WishList\WishList\obj\Debug\
 WishList
 none
 false
 DEBUG;TRACE
-C:\Users\hippieZhou\Desktop\WishList\WishList\App.xaml
+G:\WishList\WishList\App.xaml
 91776940803
 
-311486193314
-691259152245
+311169029183
+15-817316742
 Controls\BannerMenu.xaml;Themes\Generic.xaml;Views\AddWishView.xaml;Views\ClawView.xaml;Views\ListView.xaml;Views\MainView.xaml;Views\MineView.xaml;Views\AddClawView.xaml;Views\WishView.xaml;
 
 False
