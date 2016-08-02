@@ -120,6 +120,7 @@
     <Compile Include="Controls\ImageButton.cs" />
     <Compile Include="Controls\TopMenuControl.cs" />
     <Compile Include="Controls\RoundTipControl.cs" />
+    <Compile Include="Controls\MixButton.cs" />
     <Compile Include="Models\BillModel.cs" />
     <Compile Include="ViewModels\AddClawViewModel.cs" />
     <Compile Include="ViewModels\AddWishViewModel.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MineViewModel.cs" />
     <Compile Include="ViewModels\MINORManager.cs" />
+    <Compile Include="ViewModels\AddScheduleViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="ViewModels\WishViewModel.cs" />
     <Compile Include="Views\AddWishView.xaml.cs">
@@ -151,6 +153,9 @@
     </Compile>
     <Compile Include="Views\AddClawView.xaml.cs">
       <DependentUpon>AddClawView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddScheduleView.xaml.cs">
+      <DependentUpon>AddScheduleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WishView.xaml.cs">
       <DependentUpon>WishView.xaml</DependentUpon>
@@ -184,6 +189,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AddClawView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddScheduleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -373,6 +382,39 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\ic_fish_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_nothing_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_touxiang_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_fenxiang_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_item_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_yue_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_zhuti_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_chushihua_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_guanyu_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_wenti_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_upgrade_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ic_yijian_default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

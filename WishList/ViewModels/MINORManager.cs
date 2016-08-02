@@ -15,6 +15,7 @@ namespace WishList.ViewModels
     {
         public static AddClawViewModel AddClawVM = new AddClawViewModel();
         public static AddWishViewModel AddWishVM = new AddWishViewModel();
+        public static AddScheduleViewModel AddScheduleVM = new AddScheduleViewModel();
 
         private MINOR Minor { get; set; }
 

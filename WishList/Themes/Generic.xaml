@@ -116,4 +116,32 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="{x:Type local:MixButton}">
+        
+        <Setter Property="Height" Value="36"/>
+        <Setter Property="BorderBrush" Value="LightGray"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MixButton}">
+                    <Border Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="36"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="36"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{TemplateBinding Logo}" Stretch="Uniform" Margin="6"/>
+                            <TextBlock Grid.Column="1" FontSize="{TemplateBinding FontSize}" Text="{TemplateBinding Text}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Image Grid.Column="2" Source="/WishList;component/Assets/ic_item_arrow.png" Stretch="Uniform" Margin="12"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

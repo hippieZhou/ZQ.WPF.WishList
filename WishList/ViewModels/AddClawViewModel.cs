@@ -2,7 +2,6 @@
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using System;
-using System.Diagnostics;
 using System.Windows;
 
 namespace WishList.ViewModels
