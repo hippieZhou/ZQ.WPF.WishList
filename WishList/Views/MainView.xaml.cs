@@ -20,6 +20,10 @@ namespace WishList.Views
             Messenger.Default.Register<NotificationMessage>(this.minorCC, "showMinorView", ShowMinorViewFunc);
             Messenger.Default.Register<Visibility>(this.minorCC, "closeMinorView", CloseMinorViewFunc);
 
+            this.Closing += (sender, e) => 
+            {
+                ViewModelLocator.CleanUp();
+            };
         }
 
         private void ShowMinorViewFunc(NotificationMessage obj)
@@ -51,7 +55,7 @@ namespace WishList.Views
                 var Tag = (sender as Button).Tag;
                 if (Tag.Equals("btnMin"))
                 {
-                    this.WindowState = System.Windows.WindowState.Minimized;
+                    this.WindowState = WindowState.Minimized;
                 }
                 else if (Tag.Equals("btnClose"))
                 {
@@ -59,7 +63,7 @@ namespace WishList.Views
                 }
                 else
                 {
-                    this.WindowState = System.Windows.WindowState.Normal;
+                    this.WindowState = WindowState.Normal;
                 }
             }
         }
