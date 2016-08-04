@@ -33,7 +33,7 @@
             <DataTemplate x:Key="AddWishViewModel">
                 <v:AddWishView/>
             </DataTemplate>
-            <DataTemplate x:Key="ScheduleViewModel">
+            <DataTemplate x:Key="AddScheduleViewModel">
                 <v:AddScheduleView/>
             </DataTemplate>
             

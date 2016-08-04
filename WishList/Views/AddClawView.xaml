@@ -92,7 +92,7 @@
     <!--该页面不单独显示，作为其他页面展示用的框架页面-->
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="7*"/>
             <RowDefinition Height="1*"/>
@@ -100,7 +100,7 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <WL:ImageButton Margin="12" Command="{Binding BackCmd}" ImageSource="/WishList;component/Assets/ic_arrow_default.png" HorizontalAlignment="Left"/>
+            <WL:ImageButton Command="{Binding BackCmd}" Margin="12,6" ImageSource="/WishList;component/Assets/ic_arrow_default.png" Opacity="0.6" HorizontalAlignment="Left"/>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <WL:TopMenuControl Tag="IncomeDT" Checked="TopMenuControl_Checked" GroupName="GN_TIP" IsChecked="True" Text="收入" Background="#33C8F2"/>
                 <WL:TopMenuControl Tag="OutlayDT" Checked="TopMenuControl_Checked" GroupName="GN_TIP" Text="支出" Background="#33C8F2"/>
@@ -112,13 +112,12 @@
             <DatePicker Margin="12" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
         </Grid>
-        
+
         <Grid Grid.Row="2">
             <ContentControl x:Name="MainCC" ContentTemplate="{StaticResource IncomeDT}" VerticalAlignment="Top"/>
             <Border Height="1" Background="LightGray" VerticalAlignment="Bottom"/>
         </Grid>
-       
-       
+
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="48"/>
