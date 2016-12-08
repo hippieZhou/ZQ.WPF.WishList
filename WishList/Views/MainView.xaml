@@ -15,6 +15,7 @@
         MinHeight="720" MinWidth="400"
         Height="720" Width="400"
         Background="Transparent"
+        ShowInTaskbar="False"
         DataContext="{Binding Main,Source={StaticResource Locator}}"
         MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Window.Resources>

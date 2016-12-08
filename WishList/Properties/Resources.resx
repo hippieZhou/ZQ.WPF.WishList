@@ -114,4 +114,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MainView_MainView_WishList" xml:space="preserve">
+    <value>WishList</value>
+  </data>
+  <data name="MainView_MainView_愿望清单" xml:space="preserve">
+    <value>愿望清单</value>
+  </data>
+  <data name="MainView_MainView_Main_App" xml:space="preserve">
+    <value>Main App</value>
+  </data>
 </root>
